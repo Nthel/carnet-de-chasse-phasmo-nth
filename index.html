@@ -1,6 +1,6 @@
 <head>
     <meta charset="UTF-8">
-    <title>Unofficial Phasmophobia Cheat Sheet</title>
+    <title>Carnet de Chasse Phasmo</title>
     
     <link rel="icon" type="image/x-icon" href="https://zero-network.net/phasmophobia/static/imgs/favicon.ico">
     <meta name="Description" content="The Unofficial Phasmo Cheat Sheet is the ultimate cheat sheet for the popular horror video game Phasmophobia. It includes features such as BPM Finder, Shared Journal Link, Desktop Link, and more to help make you more successful in your ghost hunting endeavors" />
@@ -8,16 +8,12 @@
     <meta name="viewport" content="user-scalable=0">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tybayn.github.io/phasmo-cheat-sheet/">
-    <meta property="og:title" content="Zero-Network | Unofficial Phasmo Cheat Sheet">
+    <meta property="og:title" content="Carnet de Chasse Phasmo">
     <meta property="og:description" content="The ultimate Phasmo Cheat Sheet! Smart filters, ghost behaviors, footstep speeds, bpm finder, maps, and more!">
     <meta property="og:image" content="https://file.garden/Z-9fual_RynAMoLc/zn-logo-2.png">
     <script src="https://zero-network.net/zn/static/scripts/copyShare.js"></script>
     <script src="jquery/jquery-3.6.2.min.js"></script>
     <script>
-        if (!window.location.href.includes("tybayn.github.io") && !location.search.includes('zn=beta')){
-            window.location.href = "https://tybayn.github.io/phasmo-cheat-sheet"+window.location.search
-        }
         if (location.search.includes('refresh=1')) {
             const cacheBuster = Date.now();
             const origFetch = window.fetch;
@@ -71,7 +67,7 @@
                 <div class="maintenance-desc">
                     Seems like the servers are not responding to our calls, please refresh the page or try again later.
                     <br><br>
-                    You can check the network <a href="https://zero-network.net/status" target="_blank">status</a> or get updates and info over on our <a href="https://discord.gg/afpvC7Bf7Y" target="_blank">Discord</a>!
+                    You can check the network <a href="https://zero-network.net/status" target="_blank">status</a>.
                 </div>
                 <div class="maintenance-window"></div>
             </div>
@@ -80,7 +76,7 @@
         <div class="loading-container">
             <div class="loading-bar" id="loading-bar"></div>
         </div>
-        <div class="not-loading">Page not loading? Check our <a href="https://zero-network.net/status" target="_blank">status</a> or join our <a href="https://discord.gg/afpvC7Bf7Y" target="_blank">Discord</a></div>
+        <div class="not-loading">Page not loading? Check our <a href="https://zero-network.net/status" target="_blank">status</a></div>
     </div>
     <div id="resetMenu" style="display: none;">
         <button onclick="resetGhosts()">{{reset_ghosts}}</button>
@@ -136,13 +132,6 @@
                 {{infocopy_p10}}
             </div>
             <div class="thankyou_text">
-                <strong>{{infocopy_p11}}</strong><br>
-                <p class="footer_link">
-                    <a class="inline_image_text" style="color: #5865F2;" href="https://discord.gg/afpvC7Bf7Y" target="_blank">
-                        <img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" width="25">
-                        <strong style="padding-left: 6px;">{{infocopy_p12}}</strong>
-                    </a>
-                </p>
             </div>
             <div class="copyright_text">Copyright © 2023-2026 | Ty Bayn (Zero-Network)</div>
         </div>
@@ -907,9 +896,6 @@
             <div class="settings_title yfont white">{{news_feed}}</div>
             <div class="info_block" id="feed_info_block">
             </div>
-            <a href='https://ko-fi.com/H2H7OPG9V' target='_blank' style="margin-left: calc(50% - 70px);">
-                <img height='36' style='border:0px;height:36px;margin-bottom: 20px; background-color: #ccc; border-radius: 10px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' />
-            </a>
         </div>
     </div>
 
@@ -956,12 +942,6 @@
             <div id="z3d-footer">{{3d_models_disclaimer}}</div>
         </div>
     </div>
-
-    <a href="https://discord.gg/afpvC7Bf7Y" target="_blank" >
-        <div id="data_tab">
-            <img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6cc3c481a15a141738_icon_clyde_white_RGB.png" width="21">
-        </div>
-    </a>
 
     <div id="partner-box" style="right:-36px;">
         <div id="partner-tab" onclick="showPartner();">
@@ -1264,7 +1244,6 @@
                 6 Tanglewood Drive
             </button>
             <button id="reset" class="yfont standard_reset" onclick="reset()" onmouseenter="checkResetButton()" onmouseleave="resetResetButton()" oncontextmenu="showResetMenu(event)">{{reset}}</button>
-            <a id="kofi" href="https://ko-fi.com/severelyzero" target="_blank"><span>Support us on</span><img src="https://zero-network.net/phasmophobia/static/imgs/kofi.png"></a>
             <div id="active-users"><span id="current-version-label"></span><span id="active-users-label">{{active_users}}: -</span></div>
             <div class="copyright" onclick="showInfo(event)">{{info_copyright}}</div>
         </div>
