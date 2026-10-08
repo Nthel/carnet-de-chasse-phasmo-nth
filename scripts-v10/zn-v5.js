@@ -38,11 +38,6 @@ function checkLink(){
             window.location.href = window.location.href.split("?")[0]
         }
 
-        if (params.get('lang')){
-            lang = params.get('lang').toLowerCase()
-            setCookie("lang",lang,90)
-        }
-
         if (params.get("search")){
             openSearchTab = true
         }
@@ -143,11 +138,7 @@ function loadAllAndConnect(){
 
     let loadData = new Promise((resolve, reject) => {
 
-        lang = getCookie("lang")
-
-        if(!lang){
-            lang = 'en'
-        }
+        lang = 'fr'
         try{
             fetch(`https://zero-network.net/phasmophobia/data/ghosts.json?lang=${lang}${ghost_version ? ('&version='+ghost_version) : ''}`, {cache: 'default', signal: AbortSignal.timeout(10000)})
             .then(data => data.json())
@@ -371,23 +362,7 @@ function loadAllAndConnect(){
         })
     })
 
-    let loadLanguages = new Promise((resolve, reject) => {
-        fetch("https://zero-network.net/phasmophobia/languages", {cache: 'default', signal: AbortSignal.timeout(10000)})
-        .then(data => data.json())
-        .then(data => {
-            var lang_html = ""
-            for(let i = 0; i < data.length; i++){
-                lang_html += `<option value=${data[i]['url']} ${data[i]['lang'] == lang ? "selected" : ""}>${data[i]['lang_option']}</option>`
-            }
-            $("#language").html(lang_html)
-
-            resolve("Language data loaded")
-        })
-        .catch(error => {
-            console.error(error)
-            reject("Failed to load language data")
-        })
-    })
+    let loadLanguages = Promise.resolve("Language data skipped")
     setLoading(25)
     document.getElementById("page-loading-status").innerText = "loading language data..."
     Promise.all([load_translation()])

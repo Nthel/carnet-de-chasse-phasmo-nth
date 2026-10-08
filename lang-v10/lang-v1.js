@@ -1,4 +1,4 @@
-var lang = 'en'
+var lang = 'fr'
 var lang_data = null
 
 // ----------------------------------
@@ -155,10 +155,7 @@ function load_voice(){
 
 function load_translation(){
     return new Promise((resolve, reject) => {
-        lang = getCookie("lang")
-        if(!lang){
-            lang = 'en'
-        }
+        lang = 'fr'
         fetch(`lang-v10/${lang}/data.json`)
         .then(data => data.json())
         .then(data => {
