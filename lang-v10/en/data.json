@@ -364,8 +364,8 @@
     "{{infocopy_p8}}": "The developer of this guide (SeverelyZero) received an in-game VIP badge from Kinetic Games Partner \"JOJOsaysbreee\" for the creation of this guide as a community resource (2022-12-29)",
     "{{infocopy_p9}}": "A special thank you to @fantismalspider, @darkhooper, @.wavebuster, @sassysalamence, @idshay16,<br> @vandelayind, @thrasherop, and @pixelenthusiast. for their continued support in QA, testing,<br>ideas, data validation, and the creation of fantastic community resources",
     "{{infocopy_p10}}": "And a huge thank you to Kinetic Games Partner @bepisttv for<br>helping us gather, document, and verify game mechanics",
-    "{{infocopy_p11}}": "Found a bug? Have ideas? Want to play a few rounds?",
-    "{{infocopy_p12}}": "Join the 'Zero-Network: Ghost Hunters' server",
+    "{{infocopy_p11}}": "",
+    "{{infocopy_p12}}": "",
 
     "{{data_link_h1}}": "Login to Zero-Network",
     "{{data_link_p1}}": "Logging in will allow you to:<ol><li>Record what is input into this Cheat Sheet, allowing you to view statistics about ghosts, evidences, and play style</li><li>Import custom difficulties from the Difficulty Builder and use those as presets when choosing a difficulty from the difficulty dropdown in the Cheat Sheet</li></ol>",
@@ -384,7 +384,7 @@
     "{{data_link_p6}}": "Select the actual ghost <i>AND</i> indicate that the ghost killed you.",
     "{{data_link_b1}}": "My Stats Explorer",
     "{{data_link_h9}}": "You have successfully logged in! In order for your stats to be most accurate, be sure to select the correct number of evidences and mark the correct ghost before hitting 'Save & Reset'",
-    "{{data_link_p7}}": "To reset or adjust your stats, please make a request on our Discord.",
+    "{{data_link_p7}}": "",
     "{{data_link_b4}}": "Logout",
     "{{data_link_b5}}": "Login with Discord",
     "{{data_link_b6}}": "Login with Twitch"
