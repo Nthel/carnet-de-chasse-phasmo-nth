@@ -546,7 +546,7 @@
     "{{wiki_known_bugs_wraith}}": "<li><i>Yok</i></li>",
     "{{wiki_known_bugs_yokai}}": "<li>Yok</li>",
     "{{wiki_known_bugs_yurei}}": "<li>Dolap kapılarını kısmen açabilir</li>",
-    "{{wiki_known_bugs_footer}}": "Bu liste kapsamlı değildir. Bazı hatalar, geliştiriciler tarafından bu şekilde onaylanmamış amaçlanan özellikler olabilir veya oyundaki özellik olarak kabul edilen bazı şeyler aslında hata olabilir. Her ikisinin de kanıtınız varsa, Discord'umuzda bize bildirin!",
+    "{{wiki_known_bugs_footer}}": "Bu liste kapsamlı değildir. Bazı hatalar, geliştiriciler tarafından bu şekilde onaylanmamış amaçlanan özellikler olabilir veya oyundaki özellik olarak kabul edilen bazı şeyler aslında hata olabilir.",
     "{{wiki_media}}": "Medya",
     "{{wiki_media_action}}": "Eylem",
     "{{wiki_media_label}}": "Etiket",

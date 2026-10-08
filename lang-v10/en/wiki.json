@@ -575,7 +575,7 @@
     "{{wiki_known_bugs_wraith}}": "<li><i>None</i></li>",
     "{{wiki_known_bugs_yokai}}": "<li><i>None</i></li>",
     "{{wiki_known_bugs_yurei}}": "<li>Can partially open locker doors</li>",
-    "{{wiki_known_bugs_footer}}": "This list is not comprehensive. Some bugs may be intended features that have not been confirmed by the devs as such, or some things in game that are considered features may actually be bugs. If you have proof of either, let us know on our Discord!",
+    "{{wiki_known_bugs_footer}}": "This list is not comprehensive. Some bugs may be intended features that have not been confirmed by the devs as such, or some things in game that are considered features may actually be bugs.",
 
     "{{wiki_media}}": "Media",
     "{{wiki_media_action}}": "Action",

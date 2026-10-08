@@ -546,7 +546,7 @@
     "{{wiki_known_bugs_wraith}}": "<li><i>Nessuno</i></li>",
     "{{wiki_known_bugs_yokai}}": "<li>La distanza dal carillon a cui uno Yokai inizia il suo evento è di 5m standard invece di 2,5m</li>",
     "{{wiki_known_bugs_yurei}}": "<li>Può aprire parzialmente le porte degli armadietti</li>",
-    "{{wiki_known_bugs_footer}}": "Questo elenco non è esaustivo. Alcuni bug potrebbero essere funzionalità intenzionali che non sono state confermate dagli sviluppatori come tali, oppure alcune cose nel gioco considerate funzionalità potrebbero in realtà essere bug. Se hai prove di uno dei due, faccelo sapere sul nostro Discord!",
+    "{{wiki_known_bugs_footer}}": "Questo elenco non è esaustivo. Alcuni bug potrebbero essere funzionalità intenzionali che non sono state confermate dagli sviluppatori come tali, oppure alcune cose nel gioco considerate funzionalità potrebbero in realtà essere bug.",
     "{{wiki_media}}": "Media",
     "{{wiki_media_action}}": "Azione",
     "{{wiki_media_label}}": "Etichetta",

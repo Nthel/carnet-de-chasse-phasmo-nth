@@ -515,7 +515,7 @@
     "{{wiki_known_bugs_wraith}}": "<li><i>Keine</i></li>",
     "{{wiki_known_bugs_yokai}}": "<li>Die Entfernung zur Spieluhr, bei der Yokais das Event beginnen, beträgt 5m anstatt 2,5m</li>",
     "{{wiki_known_bugs_yurei}}": "<li>Kann Spindtüren teilweise öffnen</li>",
-    "{{wiki_known_bugs_footer}}": "Diese Liste ist nicht vollständig. Manche Fehler könnten beabsichtigte Funktionen sein, die von den Entwicklern noch nicht als solche bestätigt wurden. Außerdem könnten manche Spielelemente, die als Funktionen gelten, Fehler sein. Falls ihr Hinweise/Beweise dafür habt, lasst es uns auf unserem Discord-Server wissen!",
+    "{{wiki_known_bugs_footer}}": "Diese Liste ist nicht vollständig. Manche Fehler könnten beabsichtigte Funktionen sein, die von den Entwicklern noch nicht als solche bestätigt wurden. Außerdem könnten manche Spielelemente, die als Funktionen gelten, Fehler sein.",
     "{{wiki_media}}": "Medien",
     "{{wiki_media_action}}": "Aktion",
     "{{wiki_media_label}}": "Etikett",
