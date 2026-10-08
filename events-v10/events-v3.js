@@ -6,8 +6,7 @@ function uncover(elem){
 $(window).on('load', function() {
     let p = new URL(window.location.href).searchParams
     let vers = p.get('version')
-    fetch(`https://zero-network.net/phasmophobia/data/event.json${vers ? ('?version='+vers) : ''}`, {signal: AbortSignal.timeout(6000)})
-    .then(data => data.json())
+    fetchData(`data/event.json`, `https://zero-network.net/phasmophobia/data/event.json${vers ? ('?version='+vers) : ''}`, {signal: AbortSignal.timeout(6000)})
     .then(data => {
         if(data['version'] != false){
             document.getElementById("event_title").innerText = data['title']

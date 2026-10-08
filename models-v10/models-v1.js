@@ -1,6 +1,5 @@
 function load_models() {
-    fetch("https://zero-network.net/phasmophobia/data/3d-models.json", {signal: AbortSignal.timeout(6000)})
-    .then(data => data.json())
+    fetchData("data/3d-models.json", "https://zero-network.net/phasmophobia/data/3d-models.json", {signal: AbortSignal.timeout(6000)})
     .then(data => {
 
         setTimeout(() => {

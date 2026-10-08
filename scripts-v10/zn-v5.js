@@ -1,6 +1,17 @@
 function getCookie(e){let t=e+"=",i=decodeURIComponent(document.cookie).split(";");for(let n=0;n<i.length;n++){let o=i[n];for(;" "==o.charAt(0);)o=o.substring(1);if(0==o.indexOf(t))return o.substring(t.length,o.length)}return""}
 function setCookie(e,t,i){let n=new Date;n.setTime(n.getTime()+864e5*i);let o="expires="+n.toUTCString();document.cookie=e+"="+t+";"+o+";path=/"}
 
+// Local-first data loading: static files in data/ are used by default,
+// the remote server is only a fallback.
+function fetchData(local, remote, opts = {}){
+    return fetch(local, {cache: 'no-cache', signal: AbortSignal.timeout(6000)})
+    .then(r => { if(!r.ok) throw new Error(`${local} not found`); return r.json() })
+    .catch(() => {
+        if(!remote) throw new Error(`${local} not available`)
+        return fetch(remote, opts).then(r => r.json())
+    })
+}
+
 let openSearchTab = false
 let ghost_version = null
 
@@ -131,7 +142,7 @@ function loadAllAndConnect(){
                 $('#link_id').val("Can't Connect!")
                 $("#session").text("no-connection-to-server")
                 $("#prev-session").text(`P: ${pznid == '' ? '-' : pznid}`)
-                reject("Unable to connect")
+                resolve("Running offline")
             })
         }
     })
@@ -140,8 +151,7 @@ function loadAllAndConnect(){
 
         lang = 'fr'
         try{
-            fetch(`https://zero-network.net/phasmophobia/data/ghosts.json?lang=${lang}${ghost_version ? ('&version='+ghost_version) : ''}`, {cache: 'default', signal: AbortSignal.timeout(10000)})
-            .then(data => data.json())
+            fetchData(`data/ghosts.json`, `https://zero-network.net/phasmophobia/data/ghosts.json?lang=${lang}${ghost_version ? ('&version='+ghost_version) : ''}`, {cache: 'default', signal: AbortSignal.timeout(10000)})
             .then(data => {
 
                 all_ghosts = Object.fromEntries(data.ghosts.map(a => [a.ghost,a.name]))
@@ -277,8 +287,7 @@ function loadAllAndConnect(){
     })
 
     let loadMaps = new Promise((resolve, reject) => {
-        fetch("https://zero-network.net/phasmophobia/data/maps", {cache: 'default', signal: AbortSignal.timeout(12000)})
-        .then(data => data.json())
+        fetchData("data/maps.json", "https://zero-network.net/phasmophobia/data/maps", {cache: 'default', signal: AbortSignal.timeout(12000)})
         .then(data => {
             var map_html = ""
             var usr_set = {}
@@ -305,15 +314,14 @@ function loadAllAndConnect(){
         })
         .catch(error => {
             console.error(error)
-            document.getElementById("page-loading-status").innerText = "failed to load map data!"
-            reject("Failed to load map data")
+            console.warn("Map data unavailable, continuing without maps")
+            resolve("Map data skipped")
         })
 
     })
 
     let loadWeekly = new Promise((resolve, reject) => {
-        fetch("https://zero-network.net/phasmophobia/data/weekly.json", {cache: 'default', signal: AbortSignal.timeout(10000)})
-        .then(data => data.json())
+        fetchData("data/weekly.json", "https://zero-network.net/phasmophobia/data/weekly.json", {cache: 'default', signal: AbortSignal.timeout(10000)})
         .then(data => {
             weekly_data = {
                 "title": data.challenge,
@@ -357,8 +365,8 @@ function loadAllAndConnect(){
             resolve("Weekly data loaded")
         })
         .catch(error => {
-            console.error(error)
-            reject("Failed to load weekly data")
+            console.warn("Weekly data unavailable, continuing without it")
+            resolve("Weekly data skipped")
         })
     })
 
